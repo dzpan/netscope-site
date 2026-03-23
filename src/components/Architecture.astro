@@ -1,0 +1,62 @@
+---
+const boxes = [
+  {
+    title: 'Vue 3 Frontend',
+    subtitle: 'Cytoscape.js\nTailwind CSS',
+  },
+  {
+    title: 'FastAPI Backend',
+    subtitle: 'SQLite + FTS5\nPydantic v2',
+  },
+  {
+    title: 'SSH / SNMP',
+    subtitle: 'Scrapli\nNetmiko',
+  },
+  {
+    title: 'Network Devices',
+    subtitle: 'IOS-XE, NX-OS\nCBS, Arista EOS',
+  },
+];
+
+const platforms = ['IOS-XE', 'NX-OS', 'CBS', 'Arista EOS', 'SNMP Fallback'];
+---
+
+<section id="architecture" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-white sm:text-4xl">How It Works</h2>
+      <p class="mt-4 text-lg text-slate-400">A clean, layered architecture from browser to device.</p>
+    </div>
+
+    <!-- Flow diagram -->
+    <div class="relative mx-auto max-w-4xl">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {boxes.map((box, i) => (
+          <div class="relative">
+            <div class="rounded-lg border border-slate-700/50 border-t-2 border-t-brand-500 bg-[#1e293b] p-5 text-center">
+              <h3 class="text-sm font-semibold text-white">{box.title}</h3>
+              <p class="mt-2 text-xs text-slate-400 whitespace-pre-line">{box.subtitle}</p>
+            </div>
+            {i < boxes.length - 1 && (
+              <div class="hidden lg:flex absolute top-1/2 -right-4 -translate-y-1/2 z-10 text-brand-500">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Platform badges -->
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-3">
+      <span class="text-sm text-slate-500 mr-2">Supported:</span>
+      {platforms.map((platform) => (
+        <span class="rounded-full border border-slate-700 bg-slate-800/60 px-3 py-1 text-xs font-medium text-slate-300">
+          {platform}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
