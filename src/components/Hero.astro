@@ -52,56 +52,22 @@
       </a>
     </div>
 
-    <!-- Hero topology mockup -->
-    <div class="mx-auto mt-16 max-w-3xl">
-      <div class="rounded-xl border border-slate-700/50 bg-[#1e293b] p-8 shadow-2xl sm:p-12">
+    <!-- Hero app screenshot -->
+    <div class="mx-auto mt-16 max-w-4xl">
+      <div class="rounded-xl border border-slate-700/50 bg-[#1e293b] overflow-hidden shadow-2xl">
         <!-- Window chrome -->
-        <div class="mb-6 flex items-center gap-2">
+        <div class="flex items-center gap-2 px-4 py-3 bg-[#0f172a] border-b border-slate-700/50">
           <span class="h-3 w-3 rounded-full bg-red-500/60"></span>
           <span class="h-3 w-3 rounded-full bg-yellow-500/60"></span>
           <span class="h-3 w-3 rounded-full bg-green-500/60"></span>
           <span class="ml-4 text-xs text-slate-500 font-mono">netscope — topology view</span>
         </div>
-
-        <!-- Topology SVG -->
-        <svg viewBox="0 0 400 220" class="w-full" xmlns="http://www.w3.org/2000/svg">
-          <!-- Connection lines with animated pulse -->
-          <line x1="200" y1="30" x2="340" y2="110" stroke="#334155" stroke-width="2">
-            <animate attributeName="stroke" values="#334155;#f97316;#334155" dur="3s" repeatCount="indefinite" begin="0s" />
-          </line>
-          <line x1="340" y1="110" x2="200" y2="190" stroke="#334155" stroke-width="2">
-            <animate attributeName="stroke" values="#334155;#f97316;#334155" dur="3s" repeatCount="indefinite" begin="0.5s" />
-          </line>
-          <line x1="200" y1="190" x2="60" y2="110" stroke="#334155" stroke-width="2">
-            <animate attributeName="stroke" values="#334155;#f97316;#334155" dur="3s" repeatCount="indefinite" begin="1s" />
-          </line>
-          <line x1="60" y1="110" x2="200" y2="30" stroke="#334155" stroke-width="2">
-            <animate attributeName="stroke" values="#334155;#f97316;#334155" dur="3s" repeatCount="indefinite" begin="1.5s" />
-          </line>
-          <!-- Cross connections -->
-          <line x1="60" y1="110" x2="340" y2="110" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
-          <line x1="200" y1="30" x2="200" y2="190" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
-
-          <!-- Top node: Core Switch -->
-          <circle cx="200" cy="30" r="18" fill="#0f172a" stroke="#f97316" stroke-width="2" />
-          <text x="200" y="35" text-anchor="middle" fill="#f97316" font-size="12" font-family="Inter, sans-serif" font-weight="600">C</text>
-          <text x="200" y="10" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter, sans-serif">Core-SW1</text>
-
-          <!-- Right node: Distribution -->
-          <circle cx="340" cy="110" r="18" fill="#0f172a" stroke="#fb923c" stroke-width="2" />
-          <text x="340" y="115" text-anchor="middle" fill="#fb923c" font-size="12" font-family="Inter, sans-serif" font-weight="600">D</text>
-          <text x="340" y="140" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter, sans-serif">Dist-SW2</text>
-
-          <!-- Bottom node: Access -->
-          <circle cx="200" cy="190" r="18" fill="#0f172a" stroke="#fdba74" stroke-width="2" />
-          <text x="200" y="195" text-anchor="middle" fill="#fdba74" font-size="12" font-family="Inter, sans-serif" font-weight="600">A</text>
-          <text x="200" y="215" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter, sans-serif">Access-SW3</text>
-
-          <!-- Left node: Router -->
-          <circle cx="60" cy="110" r="18" fill="#0f172a" stroke="#f97316" stroke-width="2" />
-          <text x="60" y="115" text-anchor="middle" fill="#f97316" font-size="12" font-family="Inter, sans-serif" font-weight="600">R</text>
-          <text x="60" y="140" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter, sans-serif">Router-GW</text>
-        </svg>
+        <img
+          src="/hero-app.png"
+          alt="NetScope topology visualization showing discovered network devices and connections"
+          class="w-full"
+          loading="eager"
+        />
       </div>
     </div>
 
